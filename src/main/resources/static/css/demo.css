@@ -1,0 +1,23 @@
+.gradient-text{
+    font-size: 2em;
+    font-weight: bold;
+    background: linear-gradient(to right, red, grey, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body {
+    color: aliceblue;
+    background-image: url('images/tropical-landscape.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the whole area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+}
+
+.thead-dark{color: aliceblue;}
+
+tr{
+    color: aliceblue;
+    background-color: dodgerblue;}
