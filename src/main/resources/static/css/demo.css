@@ -6,7 +6,23 @@
     -webkit-text-fill-color: transparent;
 }
 
-body {
+body{
+    color: aliceblue;
+    background-image: url('images/tropical-landscape.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the whole area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100%; /* Full viewport height */
+    width: 100%; /* Full width */
+}
+
+.thead-dark{color: aliceblue;}
+
+tr{
+    color: aliceblue;
+    background-color: dodgerblue;}
+
+.about-body{
     color: aliceblue;
     background-image: url('images/tropical-landscape.jpg'); /* Path to your background image */
     background-size: cover; /* Ensure the image covers the whole area */
@@ -16,8 +32,82 @@ body {
     width: 100%; /* Full width */
 }
 
-.thead-dark{color: aliceblue;}
 
-tr{
+.text-and-flag {
+    display: flex; /* Use Flexbox to place the image and text side by side */
+    align-items: center; /* Align items vertically */
+}
+
+.flag {
+    width: 150px; /* Set the width of the image */
+    margin-right: 20px; /* Add space between the image and text */
+}
+
+.gradient-text h1{
+    font-size: 2em;
+    font-weight: bold;
+    background: linear-gradient(to right, red, grey, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-content p {
+    margin-top: 5px; /* Adjust the top margin of the <p> */
+    font-family: Cambria;
+    background: linear-gradient(to right, red, grey, blue);
     color: aliceblue;
-    background-color: dodgerblue;}
+
+}
+
+.text-content h1 {
+    margin-bottom: 10px; /* Adjust the bottom margin of the <h1> */
+}
+
+.second-para {
+    position: absolute;
+    bottom: 20px; /* Adjust this value */
+    width: 100%;
+    text-align: center;
+}
+
+.second-para p {
+    color: aliceblue; /* This will change the color of the second paragraph */
+    -1px -1px 0 #000,   /* Top-left shadow */
+    1px -1px 0 #000,   /* Top-right shadow */
+    -1px  1px 0 #000,   /* Bottom-left shadow */
+    1px  1px 0 #000;
+    background: linear-gradient(to right, red, grey, blue);
+}
+
+.store-hours{
+    width:25%;
+}
+
+.store-hours h3{
+    margin:0;
+    padding:0;
+
+}
+.store-hours p{
+    margin:0;
+    padding:0;
+
+}
+.btns {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, red, grey, blue);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btns:hover {
+    background-color: deepskyblue;
+}
+

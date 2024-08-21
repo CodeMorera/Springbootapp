@@ -18,9 +18,10 @@
 
 <div class="container">
     <h1 class="gradient-text"><div class="flag"> <img src="css/images/flag.jpg" /> </div>The Dominican Motorcycle Shop</h1>
+    <a href="aboutscreen" class="btns btns-primary">About Us</a>
     <hr>
     <h2>Inventory Items</h2>
-    <form th:action="@{/mainscreen}">
+    <form class="inventory-form" th:action="@{/mainscreen}">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
         &nbsp;
         <input type="submit" value="Search" />
