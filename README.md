@@ -33,3 +33,24 @@ Section D.
     -demo.css, line 110: Added color to .btns:hover. 
     -mainscreen.html, line 21: Added a button, "About Us", to link to aboutscreen page.
     
+Section E.
+
+    -BootStrapData.java, line 45: Created an IF statement to prevent any duplicate outsourced parts.
+    -BootStrapData.java, line 47 - line 53: Created an object called "Raider" thats holds the "Yamaha Raider Motor" item part information and saved it to OutsourcedPartRepository.
+    -BootStrapData.java, line 55 - line 61: Created an object called "R125" thats holds the "Yamaha R125 Handlebars" item part information and saved it to OutsourcedPartRepository.
+    -BootStrapData.java, line 63 - line 69: Created an object called "Gearshift" thats holds the "Honda Cargo125 Gear Shift Shaft" item part information and saved it to OutsourcedPartRepository.
+    -BootStrapData.java, line 72: Created an IF statement to prevent any duplicate insourced parts.
+    -BootStrapData.java, line 74 - line 79: Created an object called "Seats" thats holds the "Platinos Seats" item part information and saved it to InhousePartRepository.
+    -BootStrapData.java, line 81 - line 86: Created an object called "Footpegs" thats holds the "Platinos Footpegs" item part information and saved it to InhousePartRepository.
+    -BootStrapData.java, line 91: Created an IF statement to prevent any duplicate products.
+    -BootStrapData.java, line 92: Created a Dominican Men's jacket object called "DRJacket", with it's name, price, and inventory quanity information.
+    -BootStrapData.java, line 93: Created a Dominican Women's jacket object called "DRJacketF", with it's name, price, and inventory quanity information.
+    -BootStrapData.java, line 94: Created a Dominican themed helmet object called "DRHelmet",with it's name, price, and inventory quanity information.
+    -BootStrapData.java, line 95: Created a Dominican themed children's helmet object called "DRHelmetC", with it's name, price, and inventory quanity information.
+    -BootStrapData.java, line 96: Created a Dominican themed synthetic oil product object called "DROil", with it's name, price, and inventory quanity information.
+    -BootStrapData.java, line 97: Saved DRJacket to productRepository.
+    -BootStrapData.java, line 98: Saved DRJacketF to productRepository.
+    -BootStrapData.java, line 99: Saved DRHelmet to productRepository.
+    -BootStrapData.java, line 100: Saved DRHelmetC to productRepository.
+    -BootStrapData.java, line 101: Saved DROil to productRepository.
+    -application.properties, line 6: Changed the datasource.url name to "cmorera_2".
