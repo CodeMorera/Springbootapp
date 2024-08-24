@@ -3,6 +3,7 @@
 D287 – JAVA FRAMEWORKS
 
 Section C. 
+Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts:
  
     -mainscreen.html, line 13: Added a CSS reference link to Demo.css
     -mainscreen.html, line 15: Changed the title from "Shop" to "My Dominican Motorcycle Shop".
@@ -17,7 +18,8 @@ Section C.
     -demo.css, line 21: Changed color within <tr> tag of the tables to dodger blue and text to aliceblue.
 ![sectionCdemocss.png](src/main/resources/static/css/287images/sectionCdemocss.png)
     
-Section D.
+Section D. 
+Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen:
 
     -About.html, line 1 to line 56: Created an "about me" page with a button to link to "/mainscreen".
 ![sectionDabout1.png](src/main/resources/static/css/287images/sectionDabout1.png)
@@ -48,7 +50,7 @@ Section D.
     -mainscreen.html, line 21: Added a button, "About Us", to link to aboutscreen page.
 ![sectionDmainscreen.png](src/main/resources/static/css/287images/sectionDmainscreen.png)    
 
-Section E.
+Section E. Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database:
 
     -BootStrapData.java, line 45: Created an IF statement to prevent any duplicate outsourced parts.
     -BootStrapData.java, line 47 - line 53: Created an object called "Raider" thats holds the "Yamaha Raider Motor" item part information and saved it to OutsourcedPartRepository.
@@ -75,14 +77,22 @@ Section E.
     -application.properties, line 6: Changed the datasource.url name to "cmorera_2".
 ![sectionEapplicationprop.png](src/main/resources/static/css/287images/sectionEapplicationprop.png)
 
-Section F.
+Section F.<br> 
+Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:<br>
+
+The “Buy Now” button must be next to the buttons that update and delete products:
 
     -mainscreen.html,line 87: Added a "Buy Now" button that maps to /purchaseScreen. Located in the Product table.
 ![sectionFmainscreen.png](src/main/resources/static/css/287images/sectionFmainscreen.png)
 
-    -BuyProductController.java, line 1 - line 32: Created "BuyProductController" to handle the behaviour of the purchase, decrementing the inventory of the item
+
+The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts:
+    
+     -BuyProductController.java, line 1 - line 32: Created "BuyProductController" to handle the behaviour of the purchase, decrementing the inventory of the item
         by one and redirect either to the success or failure page.
 ![sectionFbuyproductcontroller.png](src/main/resources/static/css/287images/sectionFbuyproductcontroller.png)
+
+Display a message that indicates the success or failure of a purchase:
 
     -confirmationfailurebuy.html, line 1 - line 14: Created a failure page if the purchase process did not go through.
 ![sectionFfailure.png](src/main/resources/static/css/287images/sectionFfailure.png)
@@ -90,10 +100,20 @@ Section F.
     -confirmationsuccessbuy.html, line 1 - line 12: Created a success page if purchase went through successfully.
 ![sectionFsuccess.png](src/main/resources/static/css/287images/sectionFsuccess.png)
 
-Section G.
+Section G. Modify the parts to track maximum and minimum inventory by doing the following:<br>
 
-    -application.properties, line 6: Changed the database name to cmorera_3
-![sectionGapplicationprop.png](src/main/resources/static/css/287images/sectionGapplicationprop.png)
+Add additional fields to the part entity for maximum and minimum inventory:
+
+    -Part.java, line 33- line 38: Created minimumInv and maximumInv variables using the @Min and @Min annotations.
+![sectionGPart-max-min.png](src/main/resources/static/css/287images/sectionGPart-max-min.png)
+
+    -Part.java, line 48- line 63: Added the minimum and maximum to the Part constructor.
+![sectionGPart-Constructors.png](src/main/resources/static/css/287images/sectionGPart-Constructors.png)
+
+    -Part.java, line 97 - line 103: Created setters and getters for the new minimumInv and maximumInv variables.
+![sectionGPartsetterandgetters.png](src/main/resources/static/css/287images/sectionGPartsetterandgetters.png)
+
+Modify the sample inventory to include the maximum and minimum fields:
 
     -BootStrapData.java, line 51 - line 52: Added max and min parameters for "Raider" part.
     -BootStrapData.java, line 61 - line 62: Added max and min parameters for "R125" part.
@@ -104,20 +124,28 @@ Section G.
     -BootStrapData.java, line 92 - line 93: Added max and min parameters for "Footpegs" part.
 ![sectionGbootstrapdata2.png](src/main/resources/static/css/287images/sectionGbootstrapdata2.png)
 
+
+    -application.properties, line 6: Changed the database name to cmorera_3
+![sectionGapplicationprop.png](src/main/resources/static/css/287images/sectionGapplicationprop.png)
+
+Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values:
+    
     -InhousePart.java, line 17 - line 20: Added min and max values for InhousePart() default.
 ![sectionGInHousePart.png](src/main/resources/static/css/287images/sectionGInHousePart.png)
 
     -InhousePartForm.html, line 24 - line 28: Created inputs for minimum and maximum values for added inhouse parts.
 ![sectionGInHousePartForm.png](src/main/resources/static/css/287images/sectionGInHousePartForm.png)
 
-    -Part.java, line 126 - line 133: Created a validation method to make sure the inventory is set within it's minimum and maximum value.
-![sectionGPart.png](src/main/resources/static/css/287images/sectionGPart.png)
-
     -InhousePartServiceImpl.java, line 52 - line 56: Added the validation method as a part of the save method.
 ![sectionGInHousePartImp.png](src/main/resources/static/css/287images/sectionGInHousePartImp.png)
 
     -OutsourcedPartServiceImpl.java, line 50 - line 55: Added the validation method as a part of the save method.
 ![sectionGOutsourcedPartServiceImple.png](src/main/resources/static/css/287images/sectionGOutsourcedPartServiceImple.png)
+
+Modify the code to enforce that the inventory is between or at the minimum and maximum value:
+
+    -Part.java, line 126 - line 133: Created a validation method to make sure the inventory is set within it's minimum and maximum value.
+![sectionGPart.png](src/main/resources/static/css/287images/sectionGPart.png)
 
     -PartServiceImpl.java, line 58 - line 63: Added the validation method as a part of the save method.
 ![sectionGPartServiceImp.png](src/main/resources/static/css/287images/sectionGPartServiceImp.png)
