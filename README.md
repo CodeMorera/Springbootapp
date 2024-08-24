@@ -91,3 +91,43 @@ Section F.
 ![sectionFsuccess.png](src/main/resources/static/css/287images/sectionFsuccess.png)
 
 Section G.
+
+    -application.properties, line 6: Changed the database name to cmorera_3
+![sectionGapplicationprop.png](src/main/resources/static/css/287images/sectionGapplicationprop.png)
+
+    -BootStrapData.java, line 51 - line 52: Added max and min parameters for "Raider" part.
+    -BootStrapData.java, line 61 - line 62: Added max and min parameters for "R125" part.
+    -BootStrapData.java, line 71 - line 72: Added max and min parameters for "Gearshift" part.
+![sectionGbootstrapdata1.png](src/main/resources/static/css/287images/sectionGbootstrapdata1.png)
+
+    -BootStrapData.java, line 83 - line 84: Added max and min parameters for "Seats" part.
+    -BootStrapData.java, line 92 - line 93: Added max and min parameters for "Footpegs" part.
+![sectionGbootstrapdata2.png](src/main/resources/static/css/287images/sectionGbootstrapdata2.png)
+
+    -InhousePart.java, line 17 - line 20: Added min and max values for InhousePart() default.
+![sectionGInHousePart.png](src/main/resources/static/css/287images/sectionGInHousePart.png)
+
+    -InhousePartForm.html, line 24 - line 28: Created inputs for minimum and maximum values for added inhouse parts.
+![sectionGInHousePartForm.png](src/main/resources/static/css/287images/sectionGInHousePartForm.png)
+
+    -Part.java, line 126 - line 133: Created a validation method to make sure the inventory is set within it's minimum and maximum value.
+![sectionGPart.png](src/main/resources/static/css/287images/sectionGPart.png)
+
+    -InhousePartServiceImpl.java, line 52 - line 56: Added the validation method as a part of the save method.
+![sectionGInHousePartImp.png](src/main/resources/static/css/287images/sectionGInHousePartImp.png)
+
+    -OutsourcedPartServiceImpl.java, line 50 - line 55: Added the validation method as a part of the save method.
+![sectionGOutsourcedPartServiceImple.png](src/main/resources/static/css/287images/sectionGOutsourcedPartServiceImple.png)
+
+    -PartServiceImpl.java, line 58 - line 63: Added the validation method as a part of the save method.
+![sectionGPartServiceImp.png](src/main/resources/static/css/287images/sectionGPartServiceImp.png)
+
+    -mainscreen.html, line 40, line 41: Added "Min Inventory" and "Max Inventory" table headers.
+    -mainscreen.html, line 50, line 51: Added mininum and maximum rows to the table.
+![sectionGmainscreen.png](src/main/resources/static/css/287images/sectionGmainscreen.png)
+
+    -OutsourcedPart.java, line 17 - line 20: Added min and max values for OutsourcedPart() default.
+![sectionGOutSourcedPart.png](src/main/resources/static/css/287images/sectionGOutSourcedPart.png)
+
+    -OutsourcedPartForm.html, line 25 - line 29: Created inputs for minimum and maximum values for added outsource parts.
+![sectionGOutSourcedPartform.png](src/main/resources/static/css/287images/sectionGOutSourcedPartform.png)

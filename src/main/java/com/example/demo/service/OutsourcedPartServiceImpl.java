@@ -49,6 +49,7 @@ public class OutsourcedPartServiceImpl implements OutsourcedPartService{
 
     @Override
     public void save(OutsourcedPart thePart) {
+        thePart.inventoryValidation();
         partRepository.save(thePart);
 
     }
@@ -58,5 +59,10 @@ public class OutsourcedPartServiceImpl implements OutsourcedPartService{
         Long theIdl=(long)theId;
         partRepository.deleteById(theIdl);
     }
+
+
+
+
+
 
 }

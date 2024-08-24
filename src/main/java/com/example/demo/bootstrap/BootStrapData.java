@@ -48,6 +48,8 @@ public class BootStrapData implements CommandLineRunner {
             Raider.setCompanyName("Yamaha");
             Raider.setName("Yamaha Raider 2008 Motor");
             Raider.setInv(5);
+            Raider.setMaximumInv(1);
+            Raider.setMinimumInv(200);
             Raider.setPrice(500.00);
             Raider.setId(1);
             outsourcedPartRepository.save(Raider);
@@ -56,6 +58,8 @@ public class BootStrapData implements CommandLineRunner {
             R125.setCompanyName("Yamaha");
             R125.setName("Yamaha R125 Handlebars");
             R125.setInv(10);
+            R125.setMaximumInv(1);
+            R125.setMinimumInv(200);
             R125.setPrice(125.87);
             R125.setId(2);
             outsourcedPartRepository.save(R125);
@@ -64,6 +68,8 @@ public class BootStrapData implements CommandLineRunner {
             Gearshift.setCompanyName("Honda");
             Gearshift.setName("Honda Cargo125 Gear Shift Shaft");
             Gearshift.setInv(5);
+            Gearshift.setMaximumInv(1);
+            Gearshift.setMinimumInv(200);
             Gearshift.setPrice(75.99);
             Gearshift.setId(3);
             outsourcedPartRepository.save(Gearshift);
@@ -74,6 +80,8 @@ public class BootStrapData implements CommandLineRunner {
             InhousePart Seats = new InhousePart();
             Seats.setName("Platino Seats");
             Seats.setInv(7);
+            Seats.setMaximumInv(1);
+            Seats.setMinimumInv(200);
             Seats.setPrice(25.99);
             Seats.setId(4);
             inhousePartRepository.save(Seats);
@@ -81,6 +89,8 @@ public class BootStrapData implements CommandLineRunner {
             InhousePart Footpegs = new InhousePart();
             Footpegs.setName("Platino Footpegs");
             Footpegs.setInv(7);
+            Footpegs.setMaximumInv(1);
+            Footpegs.setMinimumInv(200);
             Footpegs.setPrice(14.99);
             Footpegs.setId(5);
             inhousePartRepository.save(Footpegs);
