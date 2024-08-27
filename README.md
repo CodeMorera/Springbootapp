@@ -210,3 +210,6 @@ PartTest.java, line 162 - line 169: Created a test that checks if setMaximumInv 
 
 PartTest.java, line 172 - line 179: Created a test that checks if setMinimumInv correctly sets the minimum inventory for partIn and partOut.<br>
 ![sectionIPartTestgetMin.png](src/main/resources/static/css/287images/sectionIPartTestgetMin.png)<br>
+
+**Section J. Remove the class files for any unused validators in order to clean your code.**
+Deleted DeletePartValidator.java and ValidDeletePart.java.
