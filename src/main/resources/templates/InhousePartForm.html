@@ -9,7 +9,7 @@
 <body>
 <h1>Inhouse Part Detail</h1>
 <form action="#" th:action="@{/showFormAddInPart}" th:object="${inhousepart}" method="POST"}>
-
+    <div th:replace="fragments/validationErrorsFragment :: errorList"></div>
 <!-- Add hidden form field to handle update -->
 <p><input type="hidden" th:field="*{id}"/></p>
 
@@ -30,8 +30,9 @@
 <p><input type="text" th:field="*{partId}" placeholder="Part ID" class="form-control mb-4 col-4"/></p>
 
 <p><input type="submit" value="Submit" /></p>
+
 </form>
-<p><errors path="price" cssClass=""error/><p>
+ <p><errors path="price" cssClass=""error/><p>
 
 <a href="http://localhost:8080/">Link
     to Main Screen</a>

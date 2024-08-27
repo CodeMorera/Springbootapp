@@ -27,18 +27,21 @@ public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, P
 
     @Override
     public boolean isValid(Product product, ConstraintValidatorContext constraintValidatorContext) {
-        if(context==null) return true;
-        if(context!=null)myContext=context;
-        ProductService repo = myContext.getBean(ProductServiceImpl.class);
-        if (product.getId() != 0) {
-            Product myProduct = repo.findById((int) product.getId());
-            for (Part p : myProduct.getParts()) {
-                if (p.getInv()<(product.getInv()-myProduct.getInv()))return false;
+        if(context==null) return true; //returns true if product "context" is valid.
+        if(context!=null)myContext=context; //myContext now holds the reference
+        ProductService repo = myContext.getBean(ProductServiceImpl.class);//Retrieves "ProductService" bean from application context
+        if (product.getId() != 0) {//Checks to see if product exists.
+            Product myProduct = repo.findById((int) product.getId()); // Gets existing product based on ID
+            for (Part pair : myProduct.getParts()) {//loop through each part associated with Product.
+                if (pair.getInv()<(product.getInv()-myProduct.getInv())){ //checks if there are enough parts to meet the needs of the updated product inventory.
+                    constraintValidatorContext.disableDefaultConstraintViolation();//allows custom error messages
+                    constraintValidatorContext.buildConstraintViolationWithTemplate("Error! Insufficient inventory for requested part: " + pair.getName()).addConstraintViolation();
+                    return false;//Product is not valid because not enough inventory.
+                }
             }
-            return true;
+            return true; //Closes the loop indicating there is enough parts for the product
         }
-        else{
-                return true;
-            }
+        return false; // New product without an ID. Can't be validated.
+
     }
 }
